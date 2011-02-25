@@ -1,11 +1,12 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/statsd", __FILE__)
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = "statsd-client"
-  s.version     = Statsd::Version
+  s.version     = Statsd::Client::Version
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Ben VandenBos']
+  s.authors     = ['Ben VandenBos', 'Andrew Coldham']
   s.email       = ['bvandenbos@gmail.com']
   s.homepage    = "http://github.com/bvandenbos/statsd-client"
   s.summary     = "Ruby client for statsd."
