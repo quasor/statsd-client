@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
+require File.expand_path("../lib/statsd-client", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "statsd-client"
